@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+header {
+  background-color: #202029;
+  color: white;
+}
+header .link-container {
+  list-style-type: none;
+  display: flex;
+}
+header .link-container li {
+  margin: 1rem 1rem;
+}
+header .link-container li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  transition-property: box-shadow;
+  transition-duration: 300ms;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+header .link-container li a i {
+  font-size: 4rem;
+}
+header .link-container li a:hover {
+  box-shadow: 0px 0px 15px black;
+}
+header .title-container {
+  padding: 4rem;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  background-color: rgba(32, 32, 41, 0.9);
+}
+header .title-container h1 {
+  font-size: 6rem;
+}
+header .title-container h2 {
+  font-size: 3rem;
+}
+header .title-container .contact-container {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+header .title-container .contact-container a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: box-shadow 300ms;
+}
+header .title-container .contact-container a a {
+  cursor: pointer;
+}
+header .title-container .contact-container a i {
+  margin-right: 1rem;
+}
+header .title-container .contact-container a:hover {
+  box-shadow: 0px 0px 15px black;
+}
+header .background-img-container {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+header .background-img-container img {
+  width: 100%;
+  max-width: 100%;
+}
+
+main {
+  position: relative;
+  top: 100vh;
+  padding: 2rem 0;
+}
+main .who-container {
+  background-color: rgba(207, 207, 207, 0.8);
+  font-size: 2rem;
+  padding: 5vh 25vw;
+  color: #2e2f36;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10vh;
+  border-bottom: 1px solid #c4c4c4;
+  box-shadow: 0 0 10px black;
+}
+main .who-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vh;
+}
+main .who-container div .who-image {
+  box-shadow: 0 0 5px black;
+  width: 40%;
+}
+main .who-container div > * {
+  margin: 0 4rem;
+}
+main .who-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  color: #2e2f36;
+}
+main .who-container p {
+  text-align: justify;
+  font-size: 2rem;
+  font-weight: 400;
+}
+main .music {
+  background-color: rgba(207, 207, 207, 0.8);
+  display: flex;
+  color: #2e2f36;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 3.5rem;
+}
+main .music h2 {
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  color: #2e2f36;
+  margin: 3.5rem 0;
+}
+main .music iframe {
+  width: 50%;
+  height: 40vh;
+  box-shadow: 0 0 10px black;
+}

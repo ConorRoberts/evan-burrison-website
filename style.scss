@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:62.5%;font-family:'Roboto',sans-serif;}
+p{font-weight:300;}
+h2{font-weight:400;}
+
+$dark-background:#202029;
+$light-background:rgb(207, 207, 207);
+$dark-text:rgb(46, 47, 54);
+
+@mixin section-header{
+    text-align:center;
+    font-size:4rem;
+    text-transform:uppercase;
+    letter-spacing:0.1rem;
+    font-weight:600;
+    color:$dark-text;
+}
+
+header{
+    background-color:$dark-background;
+    color:white;
+    .link-container{
+        list-style-type:none;
+        display:flex;
+        li{
+            margin:1rem 1rem;
+            a{
+                i{
+                    font-size:4rem;
+                }
+                color:white;
+                text-align:center;
+                text-decoration:none;
+                font-size:2rem;
+                display:flex;
+                flex-direction:column;
+                box-shadow:none;  
+                transition-property: box-shadow;
+                transition-duration:300ms;
+                padding:1.5rem;
+                border-radius:10px;
+                &:hover{
+                    box-shadow:0px 0px 15px black;
+                }
+            }
+        }
+    }
+    .title-container{
+        padding:4rem;
+        position:absolute;
+        top:25%;
+        left:10%;
+        background-color:rgba($dark-background,0.9);;
+        h1{
+            font-size:6rem;
+        }
+        h2{
+            font-size:3rem;
+        }
+        .contact-container{
+            margin-top:1rem;
+            text-align:center;
+            font-size:2.5rem;
+            a{
+                a{
+                    cursor:pointer;
+                }
+                
+                color:white;
+                text-decoration:none;
+                font-weight:300;
+                padding:1rem;
+                border-radius:10px;
+                i{
+                    margin-right:1rem;
+                }
+                transition:box-shadow 300ms;
+                &:hover{
+                    box-shadow:0px 0px 15px black;
+                }
+            }
+        }
+    }
+    
+    .background-img-container{
+        overflow:hidden;
+        height:100vh;
+        img{
+            width:100%;
+            max-width:100%;
+        }
+        position:fixed;
+        z-index:-1;
+    }
+}
+
+main{
+    position:relative;
+    top:100vh;
+    padding:2rem 0;
+    // .wrapper{
+        //     background-color:white;
+        //     margin:0 auto;
+        //     width:60%;
+        //     box-shadow:0 0 5px black;
+        //     padding:3rem;
+        // }
+    .who-container{
+        background-color:rgba($light-background,0.8);
+        font-size:2rem;
+        padding:5vh 25vw;
+        color:$dark-text;
+        font-size:2.2rem;
+        text-align:center;
+        div{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-top:4vh;
+            .who-image{
+                box-shadow:0 0 5px black;
+                width:40%;
+            }
+            & > *{
+                margin:0 4rem;
+            }
+        }
+        h2{
+            text-align:center;
+            margin-bottom:2rem;
+            font-size:4rem;
+            text-transform:uppercase;
+            letter-spacing:0.1rem;
+            font-weight:600;
+            color:$dark-text;
+        }
+        p{
+            text-align:justify;
+            font-size:2rem;
+            font-weight:400;
+        }
+        margin-bottom:10vh;
+        border-bottom:1px solid rgb(196, 196, 196);
+        box-shadow:0 0 10px black;
+    }
+    
+    .music{
+        background-color:rgba($light-background,0.8);
+        display:flex;
+        color:$dark-text;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        padding-bottom:3.5rem;
+        h2{
+            @include section-header;
+            margin:3.5rem 0;
+        }
+        iframe{
+            width:50%;
+            height:40vh;
+            box-shadow:0 0 10px black;
+        }
+    }
+}
+

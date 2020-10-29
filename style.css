@@ -37,8 +37,7 @@ header .link-container li a {
   display: flex;
   flex-direction: column;
   box-shadow: none;
-  transition-property: box-shadow;
-  transition-duration: 300ms;
+  transition: box-shadow 300ms;
   padding: 1.5rem;
   border-radius: 10px;
 }
@@ -74,9 +73,6 @@ header .title-container .contact-container a {
   border-radius: 10px;
   transition: box-shadow 300ms;
 }
-header .title-container .contact-container a a {
-  cursor: pointer;
-}
 header .title-container .contact-container a i {
   margin-right: 1rem;
 }
@@ -106,8 +102,7 @@ main .who-container {
   color: #2e2f36;
   font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 10vh;
-  border-bottom: 1px solid #c4c4c4;
+  margin-bottom: 5vh;
   box-shadow: 0 0 10px black;
 }
 main .who-container div {
@@ -136,6 +131,33 @@ main .who-container p {
   text-align: justify;
   font-size: 2rem;
   font-weight: 400;
+}
+main .skills {
+  background-color: rgba(207, 207, 207, 0.8);
+  margin-bottom: 5vh;
+}
+main .skills ul {
+  list-style-type: none;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+}
+main .skills ul li {
+  text-align: center;
+  padding: 3rem 2rem;
+  flex: 0.25;
+  color: #2e2f36;
+}
+main .skills ul li h3 {
+  margin-bottom: 1.5rem;
+  font-size: 4rem;
+}
+main .skills ul li p {
+  font-size: 2rem;
+}
+main .skills ul li:nth-child(odd) {
+  color: #b3b3b3;
+  background-color: #202029;
 }
 main .music {
   background-color: rgba(207, 207, 207, 0.8);

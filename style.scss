@@ -7,6 +7,7 @@ h2{font-weight:400;}
 $dark-background:#202029;
 $light-background:rgb(207, 207, 207);
 $dark-text:rgb(46, 47, 54);
+$section-background:rgba($light-background,0.8);
 
 @mixin section-header{
     text-align:center;
@@ -36,8 +37,7 @@ header{
                 display:flex;
                 flex-direction:column;
                 box-shadow:none;  
-                transition-property: box-shadow;
-                transition-duration:300ms;
+                transition:box-shadow 300ms;
                 padding:1.5rem;
                 border-radius:10px;
                 &:hover{
@@ -63,10 +63,6 @@ header{
             text-align:center;
             font-size:2.5rem;
             a{
-                a{
-                    cursor:pointer;
-                }
-                
                 color:white;
                 text-decoration:none;
                 font-weight:300;
@@ -99,15 +95,8 @@ main{
     position:relative;
     top:100vh;
     padding:2rem 0;
-    // .wrapper{
-        //     background-color:white;
-        //     margin:0 auto;
-        //     width:60%;
-        //     box-shadow:0 0 5px black;
-        //     padding:3rem;
-        // }
     .who-container{
-        background-color:rgba($light-background,0.8);
+        background-color:$section-background;
         font-size:2rem;
         padding:5vh 25vw;
         color:$dark-text;
@@ -140,13 +129,40 @@ main{
             font-size:2rem;
             font-weight:400;
         }
-        margin-bottom:10vh;
-        border-bottom:1px solid rgb(196, 196, 196);
+        margin-bottom:5vh;
         box-shadow:0 0 10px black;
+    }
+
+    .skills{
+        background-color:$section-background;
+        ul{
+            list-style-type:none;
+            flex:1;
+            justify-content:center;
+            display:flex;
+            li{
+                text-align:center;
+                padding:3rem 2rem;
+                flex:0.25;
+                color:$dark-text;
+                h3{
+                    margin-bottom:1.5rem;
+                    font-size:4rem;
+                }
+                p{
+                    font-size:2rem;
+                }
+                &:nth-child(odd){
+                    color:rgb(179, 179, 179);
+                    background-color:$dark-background;
+                }
+            }
+        }
+        margin-bottom:5vh;
     }
     
     .music{
-        background-color:rgba($light-background,0.8);
+        background-color:$section-background;
         display:flex;
         color:$dark-text;
         justify-content:center;

@@ -8,6 +8,7 @@ $dark-background:#202029;
 $light-background:rgb(207, 207, 207);
 $dark-text:rgb(46, 47, 54);
 $section-background:rgba($light-background,0.8);
+$section-background-dark:rgba($dark-background,0.99);
 
 @mixin section-header{
     text-align:center;
@@ -94,7 +95,16 @@ header{
 main{
     position:relative;
     top:100vh;
-    padding:2rem 0;
+    // transform:translateX(-50%);
+    // left:50%;
+    // padding:2rem 0;
+    // margin-bottom:3vh;
+    margin:0 5vw;
+    margin-bottom:3vh;
+    box-shadow:0 0 10px black;
+    section{
+        z-index:5;
+    }
     .who-container{
         background-color:$section-background;
         font-size:2rem;
@@ -129,12 +139,13 @@ main{
             font-size:2rem;
             font-weight:400;
         }
-        margin-bottom:5vh;
-        box-shadow:0 0 10px black;
+        // margin-bottom:5vh;
     }
-
+    
     .skills{
-        background-color:$section-background;
+        // box-shadow:0 0 10px black;
+        filter:drop-shadow(0 0 10px black);
+        z-index:10;
         ul{
             list-style-type:none;
             flex:1;
@@ -142,9 +153,10 @@ main{
             display:flex;
             li{
                 text-align:center;
-                padding:3rem 2rem;
-                flex:0.25;
+                padding:7rem 3rem;
+                flex:calc(1 / 3);
                 color:$dark-text;
+                background-color:$section-background;
                 h3{
                     margin-bottom:1.5rem;
                     font-size:4rem;
@@ -154,11 +166,11 @@ main{
                 }
                 &:nth-child(odd){
                     color:rgb(179, 179, 179);
-                    background-color:$dark-background;
+                    background-color:$section-background-dark;
                 }
             }
         }
-        margin-bottom:5vh;
+        // margin-bottom:5vh;
     }
     
     .music{
@@ -177,6 +189,36 @@ main{
             width:50%;
             height:40vh;
             box-shadow:0 0 10px black;
+        }
+    }
+}
+
+@media (max-width:1000px){
+    header{
+        .title-container{
+            top:45vh;
+            left:50%;
+            transform:translateX(-50%);
+        }
+    }
+    main{
+        // display:flex;
+        // flex-direction:column;
+        // align-items:center;
+        width:100vw;
+        .who-container{
+            padding:5rem 3rem;
+        }
+        .skills{
+            // width:100vw;
+            display:flex;
+            justify-content:center;
+            ul{
+                li{
+                    // width:100vw;
+                }
+                flex-direction:column;
+            }
         }
     }
 }

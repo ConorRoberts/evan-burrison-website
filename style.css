@@ -193,6 +193,9 @@ main .music iframe {
     left: 50%;
     transform: translateX(-50%);
   }
+  header .background-img-container {
+    display: none;
+  }
 
   main {
     width: 100vw;

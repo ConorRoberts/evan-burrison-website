@@ -25,6 +25,7 @@ header {
 header .link-container {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
 }
 header .link-container li {
   margin: 1rem 1rem;
@@ -187,21 +188,48 @@ main .music iframe {
   box-shadow: 0 0 10px black;
 }
 
-@media (max-width: 1000px) {
-  header .title-container {
-    top: 45vh;
-    left: 50%;
-    transform: translateX(-50%);
+@media (max-width: 1500px) {
+  header {
+    position: static;
   }
   header .background-img-container {
-    display: none;
+    position: static;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+  }
+  header .background-img-container img {
+    width: 100%;
+    max-width: 100%;
+  }
+  header .title-container {
+    transform: none;
+    position: static;
+    height: auto;
+  }
+  header .title-container h1 {
+    font-size: 4rem;
+  }
+  header .title-container .link-container {
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  header .title-container .link-container li a {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  header .title-container .link-container li a i {
+    font-size: 3.5rem;
   }
 
   main {
-    width: 100vw;
+    width: 100%;
+    margin: 0;
+    position: static;
   }
   main .who-container {
-    padding: 5rem 3rem;
+    padding: 5rem 0rem;
   }
   main .skills {
     display: flex;
@@ -209,5 +237,22 @@ main .music iframe {
   }
   main .skills ul {
     flex-direction: column;
+  }
+  main .skills ul li p {
+    text-align: justify;
+  }
+  main .music h2 {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #2e2f36;
+    margin: 3.5rem 0;
+  }
+  main .music iframe {
+    width: 90%;
+    height: 40vh;
+    box-shadow: 0 0 10px black;
   }
 }

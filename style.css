@@ -209,7 +209,11 @@ main .music iframe {
     height: auto;
   }
   header .title-container h1 {
+    text-align: center;
     font-size: 4rem;
+  }
+  header .title-container h2 {
+    text-align: center;
   }
   header .title-container .link-container {
     justify-content: center;

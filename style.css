@@ -310,10 +310,39 @@ main .music h2 {
   color: #2e2f36;
   margin: 3.5rem 0;
 }
-main .music iframe {
+main .music .spotify-player-container {
+  margin-bottom: 5rem;
   width: 50%;
-  height: 40vh;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .music .spotify-player-container iframe {
+  width: 80%;
+  height: 100%;
   box-shadow: 0 0 10px black;
+}
+main .music div h3 {
+  font-size: 3rem;
+  margin: 1rem 0;
+  font-weight: 400;
+  text-align: center;
+}
+main .music .demos-link-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .music .demos-link-container a {
+  padding: 3rem 5rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  border-radius: 15px;
+  background-color: #202029;
+  color: white;
 }
 
 footer {
@@ -379,6 +408,10 @@ footer {
   main .who-container {
     padding: 5rem 0rem;
   }
+  main .who-container img {
+    transform: translateY(50%);
+    display: none;
+  }
   main .who-container div {
     padding: 2rem 0;
   }
@@ -393,6 +426,9 @@ footer {
   main .skills ul {
     flex-direction: column;
   }
+  main .skills ul li {
+    height: 20rem;
+  }
   main .skills ul li p {
     text-align: justify;
   }
@@ -405,7 +441,10 @@ footer {
     color: #2e2f36;
     margin: 3.5rem 0;
   }
-  main .music iframe {
+  main .music .spotify-player-container {
+    width: 90%;
+  }
+  main .music .spotify-player-container iframe {
     width: 90%;
     height: 40vh;
     box-shadow: 0 0 10px black;

@@ -163,12 +163,10 @@ header {
 main {
   position: relative;
   top: 100vh;
-  // box-shadow: 0 0 10px black;
   background-color: white;
   .listen {
     padding: 3vh 0;
     position: relative;
-    // box-shadow: 0 0 20px black;
     h2 {
       @include section-header();
     }
@@ -178,7 +176,6 @@ main {
       display: flex;
       justify-content: center;
       li {
-        // box-shadow:0 0 10px black;
         a {
           background-color: $section-background-dark;
           transition: transform 300ms;
@@ -330,10 +327,41 @@ main {
       @include section-header;
       margin: 3.5rem 0;
     }
-    iframe {
+    .spotify-player-container {
+      margin-bottom: 5rem;
       width: 50%;
-      height: 40vh;
-      box-shadow: 0 0 10px black;
+      height: 50vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      iframe {
+        width: 80%;
+        height: 100%;
+        box-shadow: 0 0 10px black;
+      }
+    }
+    div {
+      h3 {
+        font-size: 3rem;
+        margin: 1rem 0;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+    .demos-link-container{
+      width:50%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      a {
+        padding: 3rem 5rem;
+        font-size: 2rem;
+        text-decoration: none;
+        color: black;
+        border-radius:15px;
+        background-color:$dark-background;
+        color:white;
+      }
     }
   }
 }
@@ -397,6 +425,10 @@ footer {
     position: static;
     .who-container {
       padding: 5rem 0rem;
+      img{
+        transform:translateY(50%);
+        display:none;
+      }
       div {
         padding: 2rem 0;
         p {
@@ -412,6 +444,7 @@ footer {
       ul {
         flex-direction: column;
         li {
+          height:20rem;
           p {
             text-align: justify;
           }
@@ -423,10 +456,13 @@ footer {
         @include section-header;
         margin: 3.5rem 0;
       }
-      iframe {
-        width: 90%;
-        height: 40vh;
-        box-shadow: 0 0 10px black;
+      .spotify-player-container{
+        width:90%;
+        iframe {
+          width: 90%;
+          height: 40vh;
+          box-shadow: 0 0 10px black;
+        }
       }
     }
   }

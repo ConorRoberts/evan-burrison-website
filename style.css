@@ -139,16 +139,16 @@ header .background-img-container img {
   max-width: 100%;
 }
 
-main {
+.home-main {
   position: relative;
   top: 100vh;
   background-color: white;
 }
-main .listen {
+.home-main .listen {
   padding: 3vh 0;
   position: relative;
 }
-main .listen h2 {
+.home-main .listen h2 {
   text-align: center;
   font-size: 4rem;
   text-transform: uppercase;
@@ -156,13 +156,13 @@ main .listen h2 {
   font-weight: 600;
   color: #2e2f36;
 }
-main .listen ul {
+.home-main .listen ul {
   list-style-type: none;
   padding: 5vh 20vw;
   display: flex;
   justify-content: center;
 }
-main .listen ul li a {
+.home-main .listen ul li a {
   background-color: rgba(32, 32, 41, 0.99);
   transition: transform 300ms;
   border: 1px solid black;
@@ -177,16 +177,17 @@ main .listen ul li a {
   display: inline-block;
   color: white;
 }
-main .listen ul li a:hover {
+.home-main .listen ul li a:hover {
   transform: scale(1.1);
 }
-main .listen ul li:nth-child(1) {
+.home-main .listen ul li:nth-child(1) {
   margin-right: 0.5rem;
 }
-main .listen ul li:nth-child(2) {
+.home-main .listen ul li:nth-child(2) {
   margin-left: 0.5rem;
 }
-main .who-container {
+.home-main .who-container {
+  box-shadow: 0 0 5px black;
   position: relative;
   overflow: hidden;
   font-size: 2rem;
@@ -194,7 +195,7 @@ main .who-container {
   font-size: 2.2rem;
   text-align: center;
 }
-main .who-container div {
+.home-main .who-container div {
   position: relative;
   background-color: rgba(255, 255, 255, 0.6);
   z-index: 10;
@@ -204,14 +205,14 @@ main .who-container div {
   align-items: center;
   justify-content: center;
 }
-main .who-container div .who-image {
+.home-main .who-container div .who-image {
   box-shadow: 0 0 5px black;
   width: 40%;
 }
-main .who-container div > * {
+.home-main .who-container div > * {
   margin: 0 4rem;
 }
-main .who-container img {
+.home-main .who-container img {
   filter: grayscale(1);
   z-index: 1;
   position: absolute;
@@ -220,7 +221,7 @@ main .who-container img {
   width: 100%;
   transform: translateY(-10%);
 }
-main .who-container h2 {
+.home-main .who-container h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 4rem;
@@ -229,21 +230,18 @@ main .who-container h2 {
   font-weight: 600;
   color: #2e2f36;
 }
-main .who-container p {
+.home-main .who-container p {
   text-align: justify;
   font-size: 2rem;
   font-weight: 400;
 }
-main .skills {
-  box-shadow: 0 0 10px black;
-}
-main .skills ul {
+.home-main .skills ul {
   list-style-type: none;
   justify-content: center;
   display: flex;
   flex: 1;
 }
-main .skills ul li {
+.home-main .skills ul li {
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -254,7 +252,7 @@ main .skills ul li {
   height: 35rem;
   z-index: 10;
 }
-main .skills ul li .text-container {
+.home-main .skills ul li .text-container {
   padding: 0 3rem;
   z-index: 10;
   height: 100%;
@@ -263,36 +261,36 @@ main .skills ul li .text-container {
   justify-content: center;
   align-items: center;
 }
-main .skills ul li .text-container.dark {
+.home-main .skills ul li .text-container.dark {
   color: #b3b3b3;
   background-color: rgba(32, 32, 41, 0.8);
 }
-main .skills ul li .text-container.light {
+.home-main .skills ul li .text-container.light {
   color: #2e2f36;
   background-color: rgba(207, 207, 207, 0.8);
 }
-main .skills ul li img {
+.home-main .skills ul li img {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 5;
   width: 100%;
 }
-main .skills ul li img.two {
+.home-main .skills ul li img.two {
   transform: translateY(10%) scale(1.2);
 }
-main .skills ul li img.three {
+.home-main .skills ul li img.three {
   transform: translateY(5%) scale(1.2);
 }
-main .skills ul li h3 {
+.home-main .skills ul li h3 {
   margin-bottom: 1.5rem;
   font-size: 4rem;
 }
-main .skills ul li p {
+.home-main .skills ul li p {
   font-size: 2rem;
   text-align: justify;
 }
-main .music {
+.home-main .music {
   background-color: white;
   display: flex;
   color: #2e2f36;
@@ -301,7 +299,7 @@ main .music {
   flex-direction: column;
   padding-bottom: 3.5rem;
 }
-main .music h2 {
+.home-main .music h2 {
   text-align: center;
   font-size: 4rem;
   text-transform: uppercase;
@@ -310,39 +308,66 @@ main .music h2 {
   color: #2e2f36;
   margin: 3.5rem 0;
 }
-main .music .spotify-player-container {
-  margin-bottom: 5rem;
+.home-main .music iframe {
   width: 50%;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .music .spotify-player-container iframe {
-  width: 80%;
-  height: 100%;
+  height: 40vh;
   box-shadow: 0 0 10px black;
 }
-main .music div h3 {
-  font-size: 3rem;
-  margin: 1rem 0;
-  font-weight: 400;
-  text-align: center;
+
+.demos-main {
+  overflow-y: scroll;
+  background-color: #202029;
+  height: 100vh;
+  padding-top: 10vh;
+  list-style-type: none;
+  color: white;
 }
-main .music .demos-link-container {
-  width: 50%;
+.demos-main .demo-list {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .music .demos-link-container a {
-  padding: 3rem 5rem;
-  font-size: 2rem;
-  text-decoration: none;
-  color: black;
-  border-radius: 15px;
-  background-color: #202029;
-  color: white;
+.demos-main .demo-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.demos-main .demo-list li .border {
+  width: 60%;
+  border-top: 1px solid white;
+  height: 5px;
+}
+.demos-main .demo-list li .demo-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.demos-main .demo-list li .demo-content div {
+  flex-direction: column;
+  display: flex;
+}
+.demos-main .demo-list li audio {
+  width: 30%;
+  padding-right: 1rem;
+}
+.demos-main .demo-list li div {
+  padding-left: 1rem;
+  width: 70%;
+}
+.demos-main h3 {
+  font-size: 3rem;
+  text-align: center;
+}
+.demos-main p {
+  text-align: justify;
+  font-size: 1.5rem;
 }
 
 footer {
@@ -400,39 +425,39 @@ footer {
     font-size: 3.5rem;
   }
 
-  main {
+  .home-main {
     width: 100%;
     margin: 0;
     position: static;
   }
-  main .who-container {
+  .home-main .who-container {
     padding: 5rem 0rem;
   }
-  main .who-container img {
+  .home-main .who-container img {
     transform: translateY(50%);
     display: none;
   }
-  main .who-container div {
+  .home-main .who-container div {
     padding: 2rem 0;
   }
-  main .who-container div p {
+  .home-main .who-container div p {
     margin: 0;
     padding: 0 3.5rem;
   }
-  main .skills {
+  .home-main .skills {
     display: flex;
     justify-content: center;
   }
-  main .skills ul {
+  .home-main .skills ul {
     flex-direction: column;
   }
-  main .skills ul li {
+  .home-main .skills ul li {
     height: 20rem;
   }
-  main .skills ul li p {
+  .home-main .skills ul li p {
     text-align: justify;
   }
-  main .music h2 {
+  .home-main .music h2 {
     text-align: center;
     font-size: 4rem;
     text-transform: uppercase;
@@ -441,10 +466,10 @@ footer {
     color: #2e2f36;
     margin: 3.5rem 0;
   }
-  main .music .spotify-player-container {
+  .home-main .music .spotify-player-container {
     width: 90%;
   }
-  main .music .spotify-player-container iframe {
+  .home-main .music .spotify-player-container iframe {
     width: 90%;
     height: 40vh;
     box-shadow: 0 0 10px black;

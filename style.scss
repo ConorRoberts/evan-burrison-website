@@ -160,7 +160,7 @@ header {
   }
 }
 
-main {
+.home-main {
   position: relative;
   top: 100vh;
   background-color: white;
@@ -204,6 +204,7 @@ main {
     }
   }
   .who-container {
+    box-shadow: 0 0 5px black;
     position: relative;
     overflow: hidden;
     font-size: 2rem;
@@ -253,8 +254,11 @@ main {
   }
 
   .skills {
-    box-shadow: 0 0 10px black;
+    // overflow:visible;
+    // filter:drop-shadow(0 0 3px black);
     ul {
+      // box-shadow: 0 0 10px black;
+      // z-index:100;
       list-style-type: none;
       justify-content: center;
       display: flex;
@@ -327,42 +331,100 @@ main {
       @include section-header;
       margin: 3.5rem 0;
     }
-    .spotify-player-container {
-      margin-bottom: 5rem;
+    iframe {
       width: 50%;
-      height: 50vh;
+      height: 40vh;
+      box-shadow: 0 0 10px black;
+    }
+    // .spotify-player-container {
+    //   margin-bottom: 5rem;
+    //   width: 50%;
+    //   height: 50vh;
+    //   display:flex;
+    //   flex-direction:column;
+    //   align-items:center;
+    // }
+    // div {
+    //   h3 {
+    //     font-size: 3rem;
+    //     margin: 1rem 0;
+    //     font-weight: 400;
+    //     text-align: center;
+    //   }
+    // }
+    // .demos-link-container{
+    //   width:50%;
+    //   display:flex;
+    //   flex-direction:column;
+    //   align-items:center;
+    //   a {
+    //     padding: 3rem 5rem;
+    //     font-size: 2rem;
+    //     text-decoration: none;
+    //     color: black;
+    //     border-radius:15px;
+    //     background-color:$dark-background;
+    //     color:white;
+    //   }
+    // }
+  }
+}
+
+.demos-main {
+  overflow-y:scroll;
+  background-color: $dark-background;
+  height: 100vh;
+  padding-top: 10vh;
+  .demo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
       display:flex;
       flex-direction:column;
       align-items:center;
-      iframe {
-        width: 80%;
-        height: 100%;
-        box-shadow: 0 0 10px black;
-      }
-    }
-    div {
-      h3 {
-        font-size: 3rem;
-        margin: 1rem 0;
-        font-weight: 400;
-        text-align: center;
-      }
-    }
-    .demos-link-container{
+      justify-content:center;
       width:50%;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      a {
-        padding: 3rem 5rem;
-        font-size: 2rem;
-        text-decoration: none;
-        color: black;
-        border-radius:15px;
-        background-color:$dark-background;
-        color:white;
+      .border {
+        // background-color: red;
+        width: 60%;
+        border-top: 1px solid white;
+        height: 5px;
+      }
+      .demo-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        div {
+          flex-direction: column;
+          display: flex;
+        }
+      }
+      audio {
+        width:30%;
+        padding-right: 1rem;
+      }
+      div {
+        padding-left: 1rem;
+        width:70%;
       }
     }
+  }
+  list-style-type: none;
+  color: white;
+
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  p {
+    text-align: justify;
+    font-size: 1.5rem;
   }
 }
 
@@ -419,15 +481,15 @@ footer {
       }
     }
   }
-  main {
+  .home-main {
     width: 100%;
     margin: 0;
     position: static;
     .who-container {
       padding: 5rem 0rem;
-      img{
-        transform:translateY(50%);
-        display:none;
+      img {
+        transform: translateY(50%);
+        display: none;
       }
       div {
         padding: 2rem 0;
@@ -444,7 +506,7 @@ footer {
       ul {
         flex-direction: column;
         li {
-          height:20rem;
+          height: 20rem;
           p {
             text-align: justify;
           }
@@ -456,8 +518,8 @@ footer {
         @include section-header;
         margin: 3.5rem 0;
       }
-      .spotify-player-container{
-        width:90%;
+      .spotify-player-container {
+        width: 90%;
         iframe {
           width: 90%;
           height: 40vh;
